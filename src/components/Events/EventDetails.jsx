@@ -19,7 +19,7 @@ export default function EventDetails() {
     onSuccess: () => {
       queryClient.invalidateQueries({
         queryKey: ["events"],
-        refetchType: "none", // since we are invalidatiing al;+l keys with 'events' and the currentpage we are in is also 'events', it willrefect again.
+        refetchType: "none", // since we are invalidatiing all keys with 'events' and the currentpage we are in is also 'events', it will refetch again.
         //to avoid that behaviour we use refetchType: 'none'. this will invalidate the queries with key 'events' but only refeth data when we go tothe corresponding component
       });
       navigate("/events");
