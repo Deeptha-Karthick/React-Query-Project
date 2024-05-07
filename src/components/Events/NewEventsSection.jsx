@@ -9,7 +9,7 @@ import EventItem from "./EventItem.jsx";
 export default function NewEventsSection() {
   const { data, isPending, isError, error } = useQuery({
     queryKey: ["events"],
-    queryFn: fetchEvents,
+    queryFn: fetchEvents, //event that gets called
     staleTime: 5000, //time after which new request should be made. makes sure no unnecessary request i smade
     //gcTime: 1000 // garbage collection time - time after which cached data should be cleared
   });
